@@ -2,7 +2,7 @@
 ![Proyecto web](https://github.com/user-attachments/assets/6aef032d-540f-4e35-814f-9b61ad4bba4b)
 
 <div align="center">
-  <h1><bold></bold>My Business WebPage</bold></h1>
+  <h1><bold></bold>My Freelance Webpage</bold></h1>
 </div>
 
 <div>

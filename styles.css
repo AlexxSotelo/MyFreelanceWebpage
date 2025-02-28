@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+html, body{
+    background-color: black;
+    background-image: url('Images/Background.png');
+    background-size: cover; /* Ajusta la imagen al fondo sin cortarla */
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+/* ordenar testo*/
+.justify-text {
+    text-align: justify;
+    max-width: 750px; /* Limita el ancho para mejorar la lectura */
+    margin: 0 auto; /* Centra el párrafo */
+    line-height: 1.6; /* Mejora la legibilidad */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #222;
+    padding: 10px 20px;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #222;
+}
+
+/* Logo de la empresa */
+.nav-logo {
+    width: 50px; /* Ajusta el tamaño del logo */
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Estilos del menú de navegación */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-item a:hover {
+    color: #8000FF;
+}
+
+/* Sección principal (Hero) */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+/* Imagen del icono con marco de gradiente */
+.hero-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #FF8660, #8000FF);
+    padding: 5px;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Títulos */
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+
+/* Descripción con espacios */
+.hero-description {
+    margin-top: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Secciones generales */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+/* Espaciado entre párrafos */
+.about-description,
+.projects-description,
+.contact-description {
+    margin-bottom: 20px;
+}
+
+.about-text {
+    margin-bottom: 15px;
+}
+
+.about-call {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+.projects-call {
+    font-size: 1.2rem;
+    margin-top: 25px;
+}
+
+/* Galería de proyectos */
+.projects-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra verticalmente si es necesario */
+    width: 100%;
+    padding: 20px 0;
+    position: relative;
+    gap: 15px;
+    margin-top: 20px;
+    padding-bottom: 4%;
+}
+
+/* Contenedor con efecto de brillo */
+.project-link {
+    display: inline-block;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Efecto de brillo con gradiente detrás */
+.project-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #FF8660, #8000FF);
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    z-index: 2; /* Elevar el brillo */
+}
+
+.project-img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    position: relative;
+    z-index: 3; /* Asegurar que la imagen esté encima */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover: Iluminación y efecto de zoom */
+.project-link:hover::before {
+    opacity: 0.6; /* Ajusta la opacidad del brillo */
+    z-index: 1; /* Mantener el brillo detrás */
+}
+
+/* Efecto de zoom y sombra en hover */
+.project-link:hover .project-img {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Formulario de contacto */
+.contact-form {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px;
+    border: 2px solid #202024;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.contact-form:focus-within {
+    box-shadow: 0 0 10px #FF8660, 0 0 20px #8000FF;
+}
+
+.form-label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #202024;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    transition: box-shadow 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border: 2px solid transparent;
+    box-shadow: 0 0 10px #FF8660, 0 0 20px #8000FF;
+}
+
+/* Placeholder con efecto tipo Apple */
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-style: italic;
+}
+
+.form-textarea {
+    height: 100px;
+}
+
+/* Botones */
+.btn-primary {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 2px solid transparent;
+    border-radius: 50px; /* Forma de píldora */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Botón Contact Me */
+.btn-contact {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    margin-top: 30px;
+}
+
+.btn-contact:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Gradiente reutilizable */
+.gradient-bg {
+    background: linear-gradient(45deg, #FF8660, #8000FF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/*Estilos de carrusel*/
+.carousel {
+    max-width: 90%;
+    position: relative;
+    width: 300px;
+    height: auto;
+    overflow: hidden;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.carousel-track {
+    height: 200px;
+    width: fit-content;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    margin: 0 10px;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Estilos de footer */
+.footer {
+    text-align: center; /* Centra todo el contenido */
+    padding: 40px 20px;
+    background-color: #111; /* Color de fondo del footer */
+    color: white;
+}
+
+.footer-logo {
+    width: 80px;  /* Más pequeña que la del hero */
+    height: 80px;
+    border-radius: 50%; /* Hace que la imagen sea redonda */
+    object-fit: cover; /* Asegura que la imagen se recorte bien */
+    display: block;
+    margin: 0 auto 10px; /* Centra la imagen */
+}
+
+.footer-title {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+.footer-text {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-icons a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s, transform 0.3s;
+}
+
+/* Efecto hover con el gradiente */
+.footer-icons a:hover {
+    background: linear-gradient(45deg, #FF8660, #8000FF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.2);
+}
+
+/* Estilos específicos para la página de "Thank You" */
+.thanks-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Usa toda la altura de la pantalla */
+    text-align: center;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Botón estilo iPhone */
+.thanks-button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    border-radius: 50px; /* Forma de pastilla */
+    border: 2px solid white;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+}
+/* Hover con gradiente */
+.thanks-button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Responsividad */
+@media screen and (max-width: 768px) {
+    .hero {
+        padding-top: 20vh;
+        padding-bottom: 20vh;
+        min-height: 100vh;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    .hero-img-container {
+        width: 80px;
+        height: 80px;
+    }
+    .justify-text {
+        max-width: 95%;
+    }
+    .nav-menu {
+        gap: 10px;
+    }
+    .projects-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+    .project-img {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+

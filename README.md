@@ -1,4 +1,5 @@
-![Proyecto web](https://github.com/user-attachments/assets/e10871b6-0626-4c5f-8698-db7b599f7fa4)
+
+![Proyecto web](https://github.com/user-attachments/assets/6aef032d-540f-4e35-814f-9b61ad4bba4b)
 
 <div align="center">
   <h1><bold></bold>My Business WebPage</bold></h1>
